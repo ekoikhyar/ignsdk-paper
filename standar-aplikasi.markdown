@@ -24,7 +24,7 @@ web (yang ditulis sesuai dengan standar HTML4/HTML5) dan berkas-berkas
 lain (lihat bagian _Struktur Berkas dan Direktori_). Aplikasi dapat
 mengakses fungsi-fungsi pada Host dengan memanfaatkan API IGN SDK.
 
-Aplikasi dikategorikan menjadi tiga, yaitu. 
+Aplikasi dikategorikan menjadi tiga, yaitu:
 
 1. Aplikasi _test_, adalah Aplikasi yang digunakan untuk
 mendemonstrasikan API IGN SDK. Aplikasi ini dibuat oleh pengembang IGN
@@ -36,7 +36,7 @@ dan/atau pihak ketiga dan pengembangannya berada di repositori
 
 ### Nama Aplikasi
 Nama Aplikasi ditulis dalam huruf kecil (lowercase) dan berakhiran
-".ign", misalnya _aplikasi-bagus.ign_.
+".ign", misalnya "aplikasi-bagus.ign".
 
 ### Struktur Berkas dan Direktori
 
@@ -51,15 +51,66 @@ aplikasi.ign/
 +-- index.html
 |
 +-- icon/
-|   |
-|   +-- icon.(svg|png)
 |
 +-- bin/
 |
 +-- menu/
     |
-    +-- ignsdk-aplikasi.desktop
+    +-- ignsdk-namaaplikasi.desktop
 ```
+
+#### Berkas `ignsdk.json`
+Berkas `ignsdk.json` merupakan _manifest_ Aplikasi. Berkas tersebut
+ditulis dengan format JSON (JavaScript Object Notation). Berikut adalah
+struktur dari berkas `ignsdk.json`:
+
+```
+{
+"config" :	{ "debug" : value }
+"window" :	{
+			"transparent" : value,
+			"noframe" : value,
+			"fullscreen" : value,
+			"width" : value,
+			"height" : value
+			}
+"button" :	[
+			"back",
+			"forward",
+			"stop",
+			"reload"
+			]
+}
+```
+
+#### Berkas `index.html`
+Berkas ini adalah berkas utama yang harus ada dalam Aplikasi. Saat
+Aplikasi dijalankan, IGN SDK akan mengeksekusi berkas ini terlebih
+dahulu.
+
+#### Direktori `icon/`
+Direktori ini digunakan untuk menyimpan berkas yang akan dipakai sebagai
+ikon pada menu. Format gambar yang dipakai adalah SVG (_Scalable Vector
+Graphics_) atau PNG (_Portable Network Graphics_).
+
+#### Direktori `bin/`
+Direktori ini digunakan untuk menyimpan berkas executable sebagai
+penunjang Aplikasi. Berbagai macam berkas executable bisa diletakkan
+dalam direktori ini, misalnya shell script (.sh), Python (.py), maupun
+format ELF Linux.
+
+#### Direktori `menu/` dan Berkas `ignsdk-namaaplikasi.desktop`
+Direktori `menu/` digunakan untuk menyimpan berkas _desktop entry_
+(berkas berakhiran ".desktop"). Semua berkas dalam direktori ini
+nantinya akan dipasang ke direktori `/usr/share/applications/` saat
+proses instalasi.
+
+Berkas _desktop entry_ dalam direktori ini harus diberi nama dengan
+awalan "ignsdk-" diikuti dengan nama aplikasi, misalnya
+`ignsdk-aplikasi-bagus.desktop`. Jika terdapat lebih dari satu berkas
+_desktop entry_, maka bedakan nama berkas-berkas tersebut pada
+akhirannya, misalnya `ignsdk-aplikasi-bagus.desktop`, 
+`ignsdk-aplikasi-bagus-help.desktop`, dan seterusnya.
 
 ### Lokasi Aplikasi
 Lokasi Aplikasi dibedakan menjadi lokasi untuk Aplikasi _test_, Aplikasi 
