@@ -1,7 +1,8 @@
 IGOS Nusantara Software Development Kit
 =======================================
 
-## Standar Aplikasi
+Standar Aplikasi
+----------------
 Revisi XX Agustus 2013
 
 [http://ignsdk.web.id][1]
@@ -90,8 +91,8 @@ dahulu.
 
 #### Direktori `icon/`
 Direktori ini digunakan untuk menyimpan berkas yang akan dipakai sebagai
-ikon pada menu. Format gambar yang dipakai adalah SVG (_Scalable Vector
-Graphics_) atau PNG (_Portable Network Graphics_).
+ikon pada menu. Format gambar yang dipakai adalah SVG (Scalable Vector
+Graphics) atau PNG (Portable Network Graphics).
 
 #### Direktori `bin/`
 Direktori ini digunakan untuk menyimpan berkas executable sebagai
@@ -100,7 +101,7 @@ dalam direktori ini, misalnya shell script (.sh), Python (.py), maupun
 format ELF Linux.
 
 #### Direktori `menu/` dan Berkas `ignsdk-namaaplikasi.desktop`
-Direktori `menu/` digunakan untuk menyimpan berkas _desktop entry_
+Direktori `menu/` digunakan untuk menyimpan berkas [_desktop entry_][3]
 (berkas berakhiran ".desktop"). Semua berkas dalam direktori ini
 nantinya akan dipasang ke direktori `/usr/share/applications/` saat
 proses instalasi.
@@ -122,3 +123,4 @@ contoh, dan Aplikasi pihak ketiga.
 
 [1]: http://ignsdk.web.id
 [2]: https://github.com/anak10thn/ignsdk-example
+[3]: http://standards.freedesktop.org/desktop-entry-spec/latest/
