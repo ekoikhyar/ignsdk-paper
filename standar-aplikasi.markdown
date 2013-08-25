@@ -9,15 +9,24 @@ Revisi XX Agustus 2013
 
 ========================================================================
 
+##Daftar Isi
+1. Penjelasan Umum
+2. Tentang Aplikasi
+3. Nama Aplikasi
+4. Lokasi Aplikasi
+5. Struktur Berkas dan Direktori
+
+========================================================================
+
 ### Penjelasan Umum
-1. Standar ini bersifat _wajib_. Setiap aplikasi yang dikembangkan dengan
+1. Standar ini bersifat __wajib__. Setiap aplikasi yang dikembangkan dengan
 IGN SDK harus mengikuti kaidah-kaidah yang dijabarkan dalam standar ini.
-2. Nama _IGOS Nusantara Software Development Kit_ selanjutnya ditulis
-sebagai IGN SDK.
-3. _Aplikasi_ adalah aplikasi yang dibuat dengan IGN SDK.
-4. _Host_ adalah lingkungan sistem operasi sebagai tempat dijalankannya
+2. Nama __IGOS Nusantara Software Development Kit__ selanjutnya ditulis
+sebagai __IGN SDK__.
+3. __Aplikasi__ adalah aplikasi yang dibuat dengan IGN SDK.
+4. __Host__ adalah lingkungan sistem operasi sebagai tempat dijalankannya
 IGN SDK dan Aplikasi.
-5. _API_ adalah kependekan dari _Application Programming Interface_.
+5. __API__ adalah kependekan dari _Application Programming Interface_.
 
 ### Tentang Aplikasi
 Aplikasi dalam hakikatnya adalah sebuah direktori berisi yang halaman
@@ -39,6 +48,14 @@ dan/atau pihak ketiga dan pengembangannya berada di repositori
 Nama Aplikasi ditulis dalam huruf kecil (lowercase) dan berakhiran
 ".ign", misalnya "aplikasi-bagus.ign".
 
+### Lokasi Aplikasi
+Lokasi Aplikasi dibedakan menjadi lokasi untuk Aplikasi _test_, Aplikasi 
+contoh, dan Aplikasi pihak ketiga.
+
+* Aplikasi _test_ berada di direktori `/usr/share/ign-sdk/test/`.
+* Aplikasi contoh berada di direktori `/opt/ignsdk/example/`.
+* Aplikasi pihak ketiga berada di direktori `/opt/ignsdk/`.
+
 ### Struktur Berkas dan Direktori
 
 Aplikasi setidaknya memuat beberapa berkas dan direktori dengan struktur
@@ -52,6 +69,8 @@ aplikasi.ign/
 +-- index.html
 |
 +-- icon/
+|   |
+|   +-- app.png
 |
 +-- bin/
 |
@@ -89,10 +108,9 @@ Berkas ini adalah berkas utama yang harus ada dalam Aplikasi. Saat
 Aplikasi dijalankan, IGN SDK akan mengeksekusi berkas ini terlebih
 dahulu.
 
-#### Direktori `icon/`
+#### Direktori `icon/` dan Berkas `app.png`
 Direktori ini digunakan untuk menyimpan berkas yang akan dipakai sebagai
-ikon pada menu. Format gambar yang dipakai adalah SVG (Scalable Vector
-Graphics) atau PNG (Portable Network Graphics).
+ikon aplikasi. Format gambar yang dipakai adalah PNG (Portable Network Graphics).
 
 #### Direktori `bin/`
 Direktori ini digunakan untuk menyimpan berkas executable sebagai
@@ -112,14 +130,6 @@ awalan "ignsdk-" diikuti dengan nama aplikasi, misalnya
 _desktop entry_, maka bedakan nama berkas-berkas tersebut pada
 akhirannya, misalnya `ignsdk-aplikasi-bagus.desktop`, 
 `ignsdk-aplikasi-bagus-help.desktop`, dan seterusnya.
-
-### Lokasi Aplikasi
-Lokasi Aplikasi dibedakan menjadi lokasi untuk Aplikasi _test_, Aplikasi 
-contoh, dan Aplikasi pihak ketiga.
-
-* Aplikasi _test_ berada di direktori `/usr/share/ign-sdk/test/`.
-* Aplikasi contoh berada di direktori `/opt/ignsdk/example/`.
-* Aplikasi pihak ketiga berada di direktori `/opt/ignsdk/`.
 
 [1]: http://ignsdk.web.id
 [2]: https://github.com/anak10thn/ignsdk-example
