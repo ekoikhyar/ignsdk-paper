@@ -68,7 +68,7 @@ aplikasi.ign/
 |
 +-- index.html
 |
-+-- icon/
++-- icons/
 |   |
 |   +-- app.png
 |
@@ -108,9 +108,9 @@ Berkas ini adalah berkas utama yang harus ada dalam Aplikasi. Saat
 Aplikasi dijalankan, IGN SDK akan mengeksekusi berkas ini terlebih
 dahulu.
 
-#### Direktori `icon/` dan Berkas `app.png`
+#### Direktori `icons/` dan Berkas `app.png`
 Direktori ini digunakan untuk menyimpan berkas yang akan dipakai sebagai
-ikon aplikasi. Format gambar yang dipakai adalah PNG (Portable Network Graphics).
+ikon aplikasi. Format gambar yang dipakai adalah PNG (Portable Network Graphics) dengan resolusi 512x512 pixel.
 
 #### Direktori `bin/`
 Direktori ini digunakan untuk menyimpan berkas executable sebagai
