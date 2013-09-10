@@ -76,7 +76,7 @@ aplikasi.ign/
 |
 +-- menu/
     |
-    +-- ignsdk-namaaplikasi.desktop
+    +-- ignsdk-namapaket.desktop
 ```
 
 #### Berkas `ignsdk.json`
@@ -118,14 +118,14 @@ penunjang Aplikasi. Berbagai macam berkas executable bisa diletakkan
 dalam direktori ini, misalnya shell script (.sh), Python (.py), maupun
 format ELF Linux.
 
-#### Direktori `menu/` dan Berkas `ignsdk-namaaplikasi.desktop`
+#### Direktori `menu/` dan Berkas `ignsdk-namapaket.desktop`
 Direktori `menu/` digunakan untuk menyimpan berkas [_desktop entry_][3]
 (berkas berakhiran ".desktop"). Semua berkas dalam direktori ini
 nantinya akan dipasang ke direktori `/usr/share/applications/` saat
 proses instalasi.
 
 Berkas _desktop entry_ dalam direktori ini harus diberi nama dengan
-awalan "ignsdk-" diikuti dengan nama aplikasi, misalnya
+awalan "ignsdk-" diikuti dengan nama paket, misalnya
 `ignsdk-aplikasi-bagus.desktop`. Jika terdapat lebih dari satu berkas
 _desktop entry_, maka bedakan nama berkas-berkas tersebut pada
 akhirannya, misalnya `ignsdk-aplikasi-bagus.desktop`, 
