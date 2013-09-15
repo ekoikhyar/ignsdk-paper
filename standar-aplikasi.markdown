@@ -86,11 +86,15 @@ struktur dari berkas `ignsdk.json`:
 
 ```
 {
-"config" :	{ "debug" : value }
+"config" :	{
+			"debug" : true/false,
+			"websecurity" : true/false,
+			"name" : value
+			}
 "window" :	{
-			"transparent" : value,
-			"noframe" : value,
-			"fullscreen" : value,
+			"transparent" : true/false,
+			"noframe" : true/false,
+			"fullscreen" : true/false,
 			"width" : value,
 			"height" : value
 			}
@@ -110,7 +114,7 @@ dahulu.
 
 #### Direktori `icons/` dan Berkas `app.png`
 Direktori ini digunakan untuk menyimpan berkas yang akan dipakai sebagai
-ikon aplikasi. Format gambar yang dipakai adalah PNG (Portable Network Graphics) dengan resolusi 512x512 pixel.
+ikon aplikasi. Format gambar yang dipakai adalah PNG (Portable Network Graphics) dengan resolusi 256x256 pixel.
 
 #### Direktori `bin/`
 Direktori ini digunakan untuk menyimpan berkas executable sebagai
