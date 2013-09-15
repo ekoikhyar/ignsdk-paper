@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="qrc:///js/jquery.js"></script>
+<script type="text/javascript" src="qrc:///js/ign.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.getJSON("http://aksaramaya.com/content/index.json",function(data){
+			console.log(data);
+			//var json = jsonStringify(data);
+			$("div").text(data.content.bookstore);
+		});
+		$(".keluar").click(function(){
+				ign.quit();
+		});
+		$(".pesan").click(function(){
+				ign.showMessage("saya ganteng");
+		});
+		$(".cli").click(function(){
+			console.log(ign.cliOut('cat /etc/passwd'));
+		});
+	})
+</script>
+</head>
+<body>
+	<div></div>
+	<button class="keluar">Keluar</button>
+	<button class="pesan">pesan</button>
+	<button onclick="ign.getToggleFullScreen()">fullscreen</button>
+	<button onclick="ign.cliOut('cat /etc/passwd')">jalankan firefox</button>
+	<button class="cli">cat /etc/passwd</button>
+</body>
+</html>
