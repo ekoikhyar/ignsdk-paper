@@ -86,11 +86,11 @@ struktur dari berkas `ignsdk.json`:
 
 ```
 {
-"config" :	{ "debug" : value }
+"config" :	{ "debug" : true/false }
 "window" :	{
-			"transparent" : value,
-			"noframe" : value,
-			"fullscreen" : value,
+			"transparent" : true/false,
+			"noframe" : true/false,
+			"fullscreen" : true/false,
 			"width" : value,
 			"height" : value
 			}
